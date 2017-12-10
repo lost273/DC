@@ -33,4 +33,32 @@ public class DotComBust {
         }
         finishGame();
     }
+    private void checkUserGuess(String userGuess){
+        numOfGuesses++;
+        String result = "missed";
+        for(DotCom dotComToTest : dotComsList){
+            result = dotComToTest.checkYourself(userGuess);
+            if(result.equals("got")){
+                break;
+            }
+            if(result.equals("sunk")){
+                dotComsList.remove(dotComToTest);
+                break;
+            }
+        }
+        System.out.println(result);
+    }
+    private void finishGame(){
+        System.out.println("subjects was sunken");
+        if(numOfGuesses <= 18){
+            System.out.println("Very good. You had " + numOfGuesses + " attempts");
+        } else {
+            System.out.println("Very bad. You had " + numOfGuesses + " attempts");
+        }
+    }
+    public static void main (String[] args){
+        DotComBust game = new DotComBust();
+        game.setUpGame();
+        game.startPlaying();
+    }
 }
