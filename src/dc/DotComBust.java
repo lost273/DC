@@ -4,7 +4,8 @@ import java.util.*;
 
 public class DotComBust {
     private GameHelper helper = new GameHelper();
-    private ArrayList<DotCom> dotComsList = new ArrayList<DotCom>();
+    //public only for test
+    public ArrayList<DotCom> dotComsList = new ArrayList<DotCom>();
     private int numOfGuesses = 0;
     
     private void setUpGame(){
@@ -58,9 +59,11 @@ public class DotComBust {
     }
     public static void main (String[] args){
         DotComBust game = new DotComBust();
-        Test gameTest = new Test();
-        
-        //game.setUpGame();
+        game.setUpGame();
         //game.startPlaying();
+        //test
+        Test gameTest = new Test();
+        String result = gameTest.getResult(game);
+        System.out.println(result);
     }
 }
