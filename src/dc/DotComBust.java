@@ -60,10 +60,10 @@ public class DotComBust {
     public static void main (String[] args){
         DotComBust game = new DotComBust();
         game.setUpGame();
-        //game.startPlaying();
+        game.startPlaying();
         //test
-        Test gameTest = new Test();
-        String result = gameTest.getResult(game);
-        System.out.println(result);
+        //Test gameTest = new Test();
+        //String result = gameTest.getResult(game);
+        //System.out.println(result);
     }
 }

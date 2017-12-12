@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dc;
 
-/**
- *
- * @author Den
- */
+
 public class TestGame {
+    private String alphabet = "abcdefg";
+    private String numbers = "0123456";
+    public String getNext (){
+        int i = (int)(Math.random() * 10);
+        int j = (int)(Math.random() * 10);
+        String result = (alphabet[i] + numbers[j]);
+        return result;
+    }
     
 }
