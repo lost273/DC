@@ -28,8 +28,10 @@ public class DotComBust {
         }
     }
     private void startPlaying(){
+        TestGame test = new TestGame();
         while(!dotComsList.isEmpty()){
-            String userGuess = helper.getUserInput("Make your move");
+            //String userGuess = helper.getUserInput("Make your move");
+            String userGuess = test.getNext();
             checkUserGuess(userGuess);
         }
         finishGame();
